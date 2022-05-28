@@ -1,0 +1,22 @@
+﻿<Window x:Name="Main" x:Class="suffixRemover.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:suffixRemover"
+        mc:Ignorable="d"
+        Title="SuffixRemover" Height="258" Width="783.6" Loaded="Main_Loaded">
+    <Grid>
+        <Button x:Name="Button1" Content="아무 것도 안하기" HorizontalAlignment="Left" Margin="10,0,0,10" Width="145" Click="Button1_Click" Height="19" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
+        <TextBox x:Name="Case1" HorizontalAlignment="Left" Margin="10,10,0,34" TextWrapping="Wrap" Text="Case1" Width="145" VerticalScrollBarVisibility="Visible"/>
+        <Button x:Name="Button2" Content="이 동작을 적용하기" HorizontalAlignment="Left" Margin="160,0,0,10" VerticalAlignment="Bottom" Width="145" Click="Button2_Click" Panel.ZIndex="1"/>
+        <TextBox x:Name="Case2" HorizontalAlignment="Left" Margin="160,10,0,34" TextWrapping="Wrap" Text="Case2" Width="145" VerticalScrollBarVisibility="Visible"/>
+        <Button x:Name="Button3" Content="이 동작을 적용하기" HorizontalAlignment="Left" Margin="310,0,0,10" VerticalAlignment="Bottom" Width="145" Click="Button3_Click" Panel.ZIndex="1"/>
+        <TextBox x:Name="Case3" HorizontalAlignment="Left" Margin="310,9,0,35" TextWrapping="Wrap" Text="Case3" Width="145" VerticalScrollBarVisibility="Visible"/>
+        <TextBox x:Name="Case4" HorizontalAlignment="Left" Margin="460,10,0,34" TextWrapping="Wrap" Text="Case4" Width="145" VerticalScrollBarVisibility="Visible"/>
+        <Button x:Name="Button4" Content="이 동작을 적용하기" HorizontalAlignment="Left" Margin="460,0,0,10" VerticalAlignment="Bottom" Width="145" Click="Button4_Click" Panel.ZIndex="1"/>
+        <TextBox x:Name="Case5" HorizontalAlignment="Left" Margin="610,10,0,34" TextWrapping="Wrap" Text="Case5" Width="145" VerticalScrollBarVisibility="Visible"/>
+        <Button x:Name="Button5" Content="이 동작을 적용하기" HorizontalAlignment="Left" Margin="610,0,0,10" VerticalAlignment="Bottom" Width="145" Click="Button5_Click" Panel.ZIndex="1"/>
+
+    </Grid>
+</Window>
