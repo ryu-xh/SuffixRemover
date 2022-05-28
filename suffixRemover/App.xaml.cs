@@ -13,5 +13,6 @@ namespace suffixRemover
     /// </summary>
     public partial class App : Application
     {
+
     }
 }
