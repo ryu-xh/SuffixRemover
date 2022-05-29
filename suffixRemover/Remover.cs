@@ -11,7 +11,7 @@ namespace suffixRemover
     {
         private Regex lyricRecorgnize = new Regex("Lyric=(.+)");
 
-        public Regex lyricRegex = new Regex("([aiueo-]+ |)([あ-ん]+|(R))([一-鿕]+|)([A-G]\\d|)");
+        public Regex lyricRegex = new Regex("Lyric=([aiueo-]+ |)([あ-ん|a-z+][\\d]+|(R)|(\\?))([一-鿕]+|)([A-G+]\\d|)");
 
 
         public bool IsLyric(string line)
@@ -33,16 +33,16 @@ namespace suffixRemover
             return str;
         }
 
-        public string RemainOnlyGroupFirstSecondFourth(string lyric)
+        public string RemainOnlyGroupFirstSecondFifth(string lyric)
         {
             Match m = lyricRegex.Match(lyric);
 
             if (m.Success)
             {
-                return $"{m.Groups[1].ToString()}{m.Groups[2].ToString()}{m.Groups[4].ToString()}";
+                return $"{m.Groups[1].ToString()}{m.Groups[2].ToString()}{m.Groups[5].ToString()}";
             }
 
-            return lyric;
+            return GetLyric(lyric);
         }
 
         public string RemainOnlyGroupFirstSecond(string lyric)
@@ -54,7 +54,7 @@ namespace suffixRemover
                 return $"{m.Groups[1].ToString()}{m.Groups[2].ToString()}";
             }
 
-            return lyric;
+            return GetLyric(lyric);
         }
 
         public string RemainOnlyGroupSecond(string lyric)
@@ -66,19 +66,19 @@ namespace suffixRemover
                 return $"{m.Groups[2].ToString()}";
             }
 
-            return lyric;
+            return GetLyric(lyric);
         }
 
-        public string RemainOnlyGroupSecondFourth(string lyric)
+        public string RemainOnlyGroupSecondFifth(string lyric)
         {
             Match m = lyricRegex.Match(lyric);
 
             if (m.Success)
             {
-                return $"{m.Groups[2].ToString()}{m.Groups[4].ToString()}";
+                return $"{m.Groups[2].ToString()}{m.Groups[5].ToString()}";
             }
 
-            return lyric;
+            return GetLyric(lyric);
         }
 
 

@@ -97,15 +97,15 @@ namespace suffixRemover
                 {
                     string originLyric = remover.GetLyric(line);
                     string remainGroupFirstSecondLyric = remover.RemainOnlyGroupFirstSecond(line);
-                    string remainGroupFirstSecondFourthLyric = remover.RemainOnlyGroupFirstSecondFourth(line);
+                    string remainGroupFirstSecondFifthLyric = remover.RemainOnlyGroupFirstSecondFifth(line);
                     string remainGrouptSecondLyric = remover.RemainOnlyGroupSecond(line);
-                    string remainGrouptSecondFourthLyric = remover.RemainOnlyGroupSecondFourth(line);
+                    string remainGrouptSecondFifthLyric = remover.RemainOnlyGroupSecondFifth(line);
 
                     Case1.Text = $"{Case1.Text}{originLyric} → {originLyric}\n";
                     Case2.Text = $"{Case2.Text}{originLyric} → {remainGroupFirstSecondLyric}\n";
-                    Case3.Text = $"{Case3.Text}{originLyric} → {remainGroupFirstSecondFourthLyric}\n";
+                    Case3.Text = $"{Case3.Text}{originLyric} → {remainGroupFirstSecondFifthLyric}\n";
                     Case4.Text = $"{Case4.Text}{originLyric} → {remainGrouptSecondLyric}\n";
-                    Case5.Text = $"{Case5.Text}{originLyric} → {remainGrouptSecondFourthLyric}\n";
+                    Case5.Text = $"{Case5.Text}{originLyric} → {remainGrouptSecondFifthLyric}\n";
 
                 }
             }
@@ -165,7 +165,7 @@ namespace suffixRemover
             {
                 if (remover.IsLyric(line))
                 {
-                    string lyric = $"Lyric={remover.RemainOnlyGroupFirstSecondFourth(line)}";
+                    string lyric = $"Lyric={remover.RemainOnlyGroupFirstSecondFifth(line)}";
 
                     writer.WriteLine(lyric);
                 }
@@ -211,7 +211,7 @@ namespace suffixRemover
             {
                 if (remover.IsLyric(line))
                 {
-                    string lyric = $"Lyric={remover.RemainOnlyGroupSecondFourth(line)}";
+                    string lyric = $"Lyric={remover.RemainOnlyGroupSecondFifth(line)}";
 
                     writer.WriteLine(lyric);
                 }
