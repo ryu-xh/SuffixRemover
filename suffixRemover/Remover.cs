@@ -11,7 +11,7 @@ namespace suffixRemover
     {
         private Regex lyricRecorgnize = new Regex("Lyric=(.+)");
 
-        public Regex lyricRegex = new Regex("Lyric=([aiueo-]+ |)([あ-ん|a-z+][\\d]+|(R)|(\\?))([一-鿕]+|)([A-G+]\\d|)");
+        public Regex lyricRegex = new Regex("Lyric=([aiueo-] |)([a-z]+\\d+|[あ-ん|a-z]+|R|\\?)([一-鿕]+|)([A-G]\\d|)");
 
 
         public bool IsLyric(string line)
