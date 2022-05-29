@@ -130,7 +130,16 @@ namespace suffixRemover
 
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            Open();
+
+            string line;
+
+            while ((line = reader.ReadLine()) != null)
+            {
+                writer.WriteLine(line);
+            }
+
+            Close();
         }
 
         private void Button2_Click(object sender, RoutedEventArgs e)
